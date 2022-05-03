@@ -3,7 +3,7 @@ const express = require('express')
 const MULT = process.env.MULT !== undefined ? process.env.MULT : true
 const ADD = process.env.ADD !== undefined ? process.env.ADD : true
 const app = express()
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8080
 const randInt = (min, max) => Math.floor(Math.random() * (max - min)) + min
 let mult = false
 let add = false
@@ -67,3 +67,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Worker listening at http://localhost:${port}`)
 })
+
+//docker run -dip 8080:8080 worker

@@ -1,5 +1,5 @@
 FROM node:alpine
-EXPOSE 3000
 RUN yarn
 COPY . .
+EXPOSE 3000
 CMD node main.js
